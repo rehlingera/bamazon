@@ -163,5 +163,5 @@ function validateNum(num){
 //The exit function...
 function exit() {
     //Log a goobye to the console and let the app close out.
-    console.log("Thank you! Please come again!");
+    console.log("┌┬┐┬ ┬┌─┐┌┐┌┬┌─  ┬ ┬┌─┐┬ ┬┬\n │ ├─┤├─┤│││├┴┐  └┬┘│ ││ ││\n ┴ ┴ ┴┴ ┴┘└┘┴ ┴   ┴ └─┘└─┘o\n");
 }
