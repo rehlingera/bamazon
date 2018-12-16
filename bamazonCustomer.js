@@ -104,8 +104,13 @@ shopItems = function(response) {
                             validate:validateNum
                         }
                     ).then(function(ans){
+                        //If the user doesn't have enough money, the user is told they can't afford it and is taken back to the products list...
+                        if(balance<selectedPrice*ans.amount){
+                            console.log("Sorry! You can't afford this right now!");
+                            shopItems(response);
+                        }
                         //If the amount requested is less than the amount available, ask the user to confirm purchase...
-                        if(ans.amount<=selectedStock){
+                        else if(balance>=selectedPrice*ans.amount&&ans.amount<=selectedStock){
                             inquirer.prompt(
                                 {
                                     type:"list",
